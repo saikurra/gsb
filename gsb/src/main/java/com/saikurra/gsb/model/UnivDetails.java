@@ -1,6 +1,11 @@
 package com.saikurra.gsb.model;
 
-public class UnivDetails {
+import java.io.Serializable;
+
+public class UnivDetails implements Serializable {
+
+
+	private static final long serialVersionUID = 392106174032808425L;
 
 	private String univName;
 	
