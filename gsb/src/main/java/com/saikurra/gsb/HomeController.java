@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.saikurra.gsb.model.EngineeringDetails;
+import com.saikurra.gsb.model.Univ;
 import com.saikurra.gsb.model.UnivDetails;
 
 /**
@@ -25,6 +27,7 @@ public class HomeController {
 			/*logger.info("Welcome home! The client locale is {}.", locale);*/
 			ModelAndView mv= new ModelAndView();
 			mv.addObject("univDetails", new UnivDetails());
+			mv.addObject("enggDetails", new EngineeringDetails());
 			mv.setViewName("adduniv");
 			return mv;
 	   }
@@ -34,8 +37,21 @@ public class HomeController {
 		  logger.debug("University Details Submitted");
 		  ModelAndView mv= new ModelAndView();
 		  mv.addObject("univDetails", univDetails);
+		  mv.addObject("enggDetails", new EngineeringDetails());
 		  mv.setViewName("adduniv");
 	      return mv;
 	   }
+	  
+
+	  @RequestMapping(value="/submitEnggDetails", method = RequestMethod.POST)
+	   public ModelAndView addEnggDetails(@ModelAttribute("enggDetails") EngineeringDetails enggDetails) {
+		  logger.debug("Engg Details Submitted");
+		  ModelAndView mv= new ModelAndView();
+		  mv.addObject("univDetails", new UnivDetails());
+		  mv.addObject("enggDetails", enggDetails);
+		  mv.setViewName("adduniv");
+	  		return mv;
+	   }
+	  
 	
 }

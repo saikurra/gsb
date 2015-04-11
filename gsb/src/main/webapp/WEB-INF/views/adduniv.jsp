@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Add New University</h1>
-<div align="center">
+<div align="left">
 <form:form method="post"  modelAttribute="univDetails"  action="submitUnivDetails">
 	Name<br><form:input path="univName"/><br>
 	Code<br><form:input path="univCode"/><br>
@@ -18,6 +18,22 @@
 	City<br><form:input path="city"/><br>
 	State<br><form:input path="state"/><br>
 	ZipCode<br><form:input path="zipCode"/><br>
+	<input type="submit" value="Submit"><br>
+</form:form>
+</div>
+<div align="center">
+<form:form method="post"  modelAttribute="enggDetails"  action="submitEnggDetails">
+	Tuition Fee<br><form:input path="tuitionFee"/><br>
+	Fall Deadline(dd/mm/yy)<br><form:input path="fallDeadline"/><br>
+	Spring Deadline(dd/mm/yy)<br><form:input path="springDeadline"/><br>
+	Summer Deadline(dd/mm/yy)<br><form:input path="summerDeadline"/><br>
+	Quant Score<br><form:input path="greQuant"/><br>
+	Verbal Score<br><form:input path="greVerbal"/><br>
+	AWA Score<br><form:input path="greAwa"/><br>
+	IELTS<br><form:input path="ielts"/><br>
+	TOEFL<br><form:input path="toefl"/><br>
+	SOURCE URL<br><form:input path="eslSourceUrl"/><br>
+	Mailing Address<br><form:input path="mailingAddress"/><br>
 	<input type="submit" value="Submit"><br>
 </form:form>
 </div>
