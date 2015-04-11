@@ -2,13 +2,15 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>Add University</title>
 </head>
 <body>
-<h1>
-	Hello world!  
+<h1 align="center">
+	Add University
 </h1>
+<div align="center">
 
-<P>  The time on the server is ${serverTime}. </P>
+
+</div>
 </body>
 </html>
