@@ -10,7 +10,9 @@
 </head>
 <body>
 <h1 align="center">Add New University</h1>
-<div align="left">
+<table>
+<tr><td width="600">
+<div>
 <form:form method="post"  modelAttribute="univDetails"  action="submitUnivDetails">
 	Name<br><form:input path="univName"/><br>
 	Code<br><form:input path="univCode"/><br>
@@ -21,7 +23,8 @@
 	<input type="submit" value="Submit"><br>
 </form:form>
 </div>
-<div align="center">
+</td><td width="600" >
+<div>
 <form:form method="post"  modelAttribute="enggDetails"  action="submitEnggDetails">
 	Tuition Fee<br><form:input path="tuitionFee"/><br>
 	Fall Deadline(dd/mm/yy)<br><form:input path="fallDeadline"/><br>
@@ -37,5 +40,7 @@
 	<input type="submit" value="Submit"><br>
 </form:form>
 </div>
+</td></tr>
+</table>
 </body>
 </html>
